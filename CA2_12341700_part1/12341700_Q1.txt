@@ -1,0 +1,17 @@
+before running : 
+
+Total-Time : 2+3+5 = 10
+CPU=6.5
+CPU utilization : (6.5/10)*100 = 65%
+
+After running : 
+
+Stats: Total Time 15
+Stats: CPU Busy 10 (66.67%)
+Stats: IO Busy  9 (60.00%)
+
+
+The total time required for all processes to finish - 15
+The CPU utilization percentage - 66.67%
+
+With SWITCH_ON_IO and IO_RUN_LATER, the CPU switches when a process starts I/O, but I/O completion waits until the CPU is free. This can leave the CPU idle when all processes are in I/O, lowering utilization.

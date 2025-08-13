@@ -1,0 +1,11 @@
+With SWITCH_ON_END, the CPU continues executing a process until it completely finishes, without switching when it starts an I/O operation.
+If the running process blocks for I/O, the CPU sits idle even when other processes are ready to run, leading to longer idle periods—especially for I/O-bound processes that frequently pause.
+This approach is inefficient in interactive or multitasking environments, as it delays responsiveness and wastes CPU cycles that could be used to execute other ready tasks.
+
+
+
+
+
+
+
+

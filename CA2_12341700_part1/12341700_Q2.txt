@@ -1,0 +1,3 @@
+With IO_RUN_IMMEDIATE, as soon as a process finishes its I/O operation, it is immediately moved to the CPU and can even preempt the currently running process.
+This minimizes the waiting time after I/O completion, allowing the CPU to quickly pick up ready work instead of remaining idle until the next scheduling cycle.
+As a result, idle periods caused by all processes being in I/O are significantly reduced, and overall CPU utilization improves compared to Q1, where processes had to wait until the CPU was free before resuming.
