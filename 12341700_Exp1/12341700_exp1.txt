@@ -1,0 +1,9 @@
+When we kill a parent process, any of its living child processes become orphans.
+These orphan processes are immediately adopted by a special process called init.
+
+- The init process automatically adopts orphaned processes to ensure they still have a valid parent.
+
+- It is responsible for cleaning up these processes when they finish, preventing zombie processes.
+
+What happens to the shell after the kill?
+When the middle parent shell is killed, the terminal loses its controlling process. Since the session was attached to that shell, there’s no process left to handle our input. The terminal sends an End-Of-File (EOF) to the session, which the shell interprets as an exit command. This causes the terminal to automatically close.
